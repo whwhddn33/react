@@ -1,0 +1,213 @@
+/* * {
+    border: 1px solid !important;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&family=Neonderthaw&family=Sawarabi+Gothic&display=swap");
+#root {
+  height: 100vh;
+}
+.App,
+body {
+  height: 100%;
+}
+
+.App {
+  background-color: #f8f8f8;
+
+  display: flex;
+
+  .gnb {
+    background-color: white;
+    border-right: 1px dashed #d7d7d7;
+    transition: 1s;
+    .GnbWrapper {
+      .TopLogo {
+        img {
+          width: 244px;
+        }
+      }
+      .GnbItemWrapper {
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        font-family: "Sawarabi Gothic";
+        .GnbItem {
+          position: relative;
+          border-radius: 30px;
+          transition: 0.2s;
+          cursor: pointer;
+          &:hover {
+            transition: 0.2s;
+            background-color: #d7d7d7;
+            & > img {
+              transition: 0.2s;
+              transform: scale(1.1);
+            }
+          }
+          &.on{
+            .UsersList {
+              display: flex;
+              visibility: visible;
+              opacity: 1;
+            }
+
+          }
+          padding: 10px;
+          display: flex;
+          gap: 10px;
+          font-size: 16px;
+          .gnb_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .UsersList {
+            visibility: hidden;
+            opacity: 0;
+            transition: .2s;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 20px;
+            width: 170px;
+            position: absolute;
+            right: -150px; 
+            display: flex;
+
+            
+            flex-direction: column;
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+            gap: 20px;
+
+            .UserLink {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              border-radius: 20px;
+              &:hover {
+                transition: 0.2s;
+                transform: scale(1.05);
+                background-color: #f8f8f8;
+              }
+              &.on {
+                .UserProfileImg {
+                  //box-shadow: 0 0 5px 2px rgba(0, 254, 17, 0.712);
+                  border: 2px solid rgba(0, 254, 93, 0.712);
+                  filter: grayscale(0);
+                }
+              }
+              .UserProfileImg {
+                width: 34px;
+                height: 34px;
+                overflow: hidden;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid rgba(0, 0, 0, 0.712);
+                filter: grayscale(1);
+                img {
+                  /* width: 100%; */
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    width: calc(100% - 244px);
+    min-height: 100vh;
+    overflow: auto;
+    padding: 30px 100px;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    .content {
+      height: 100%;
+      width: 470px;
+      .timeline_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        .timeline {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          height: 600px;
+          background-color: white;
+          .user_info_wrapper {
+            font-family: "Sawarabi Gothic";
+            .info_box {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-weight: 700;
+
+              .user_img {
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                  /* width: 100%; */
+                  height: 100%;
+                }
+              }
+            }
+          }
+          .photo_area {
+            height: 400px;
+            overflow: hidden;
+            img {
+              width: 100%;
+            }
+          }
+          .content_info_area {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .info {
+              font-size: 10px;
+              color: #888888;
+            }
+            .photo_content {
+              font-family: "Nanum Gothic";
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+    .side_notice {
+      width: 308px;
+      height: 100%;
+    }
+    footer {
+      width: 100%;
+    }
+  }
+}
+/* #App .wrapper{
+    display: none;
+    flex-direction: column;
+}
+#App .item{
+    display: none;
+}
+#App .wrapper,#App .item{s
+    display: none;
+    transition: .7s;
+} */
